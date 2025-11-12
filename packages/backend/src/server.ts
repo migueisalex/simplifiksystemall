@@ -3,6 +3,7 @@ import cors, { CorsOptions } from 'cors';
 import dotenv from 'dotenv';
 import authRoutes from './routes/authRoutes';
 import postRoutes from './routes/postRoutes';
+import userRoutes from './routes/userRoutes';
 import mediaRoutes from './routes/mediaRoutes';
 import aiRoutes from './routes/aiRoutes';
 import subscriptionRoutes from './routes/subscriptionRoutes';
@@ -58,6 +59,7 @@ app.use('/api/posts', postRoutes);
 app.use('/api/media', mediaRoutes);
 app.use('/api/ai', aiRoutes);
 app.use('/api/subscriptions', subscriptionRoutes);
+app.use('/api/users', userRoutes);
 
 // Health check
 app.get('/health', (req: Request, res: Response) => {

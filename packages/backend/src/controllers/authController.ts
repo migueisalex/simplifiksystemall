@@ -183,6 +183,11 @@ export class AuthController {
       }
 
       // Verifica status do usuário
+      if (user.status === UserStatus.Bloqueado) {
+        res.status(403).json({ error: 'Sua conta está bloqueada. Entre em contato com o suporte.' });
+        return;
+      }
+
       if (user.status === UserStatus.Inadimplente) {
         // Retorna token mas indica status
         const token = generateToken({
