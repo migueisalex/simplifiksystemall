@@ -1,0 +1,24 @@
+{
+  "name": "simplifikapost-sistema-completo",
+  "version": "1.0.0",
+  "description": "Monorepo para o sistema SimplifikaPost, unindo front-end e back-end.",
+  "main": "index.js",
+  "scripts": {
+    "start:backend": "npm run start --workspace=packages/backend",
+    "start:frontend": "npm run dev --workspace=packages/frontend",
+    "install:all": "npm install",
+    "build:all": "npm run build --workspaces",
+    "start:all": "npm run start:backend & npm run start:frontend"
+  },
+  "keywords": [
+    "monorepo",
+    "nodejs",
+    "frontend",
+    "backend"
+  ],
+  "author": "migueisalex",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ]
+}
