@@ -4,6 +4,7 @@
   "description": "Monorepo para o sistema SimplifikaPost, unindo front-end e back-end.",
   "main": "index.js",
   "scripts": {
+    "start": "cd packages/backend && npm run start",
     "start:backend": "npm run start --workspace=packages/backend",
     "start:frontend": "npm run dev --workspace=packages/frontend",
     "install:all": "npm install",
